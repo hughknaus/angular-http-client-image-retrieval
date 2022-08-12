@@ -30,7 +30,7 @@ export class AppComponent implements OnInit, AfterContentInit {
       mergeMap(blob => this.blobToBase64(blob)),
     ).subscribe((base64Image) => {
       this.isImageLoading = true;
-      console.log("TEST - this.path", base64Image)
+      console.log("TEST - this.imageToShow", base64Image)
       this.imageToShow = base64Image;
       this.chg.detectChanges();
       this.isImageLoading = false;
